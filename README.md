@@ -29,3 +29,5 @@ v > 0 ∴ λ = b - r = 4 - 2 = 2
 4λ2<sub>4</sub> = 80
 
 O volume da piscina é 80 m³
+
+[Mais em barv.atspace.eu/](http://barv.atspace.eu/)
