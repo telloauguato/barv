@@ -8,12 +8,11 @@ const barv = ({ b, r, v, x }) => {
     var l = b - r;
     v = cal(l);
 
-    if (v > 0) {
-      return v;
-    } else {
-      l = b + r;
-      v = cal(l)
-    }
+    if (v > 0) return v;
+
+    l = b + r;
+    v = cal(l)
+
     return v
   }
 
