@@ -45,9 +45,9 @@ export default function Home() {
       </div>
       <div className="mt-10 flex flex-1 flex-col text-xl text-center font-mono">
         <span>{b} × ({b}² - {r}² + {v < 0 ? `(${v})` : v} × ({v > 0 ? `${b} - ${r}` : `${b} + ${r}`}))</span>
-        <span>{b} × ({Math.pow(b, 2)} - {Math.pow(r, 2)} + {v} × {v > 0 ? b - r : b + r})</span>
-        <span>{b} × ({Math.pow(b, 2) - Math.pow(r, 2)} + {v * (v > 0 ? (b - r) : (b + r))})</span>
-        <span>{b} × {Math.pow(b, 2) - Math.pow(r, 2) + v * (v > 0 ? (b - r) : (b + r))}</span>
+        <span>{b} × ({Math.pow(b, 2)} - {Math.pow(r, 2)} + {v} × {v > 0 ? Number(b) - Number(r) : Number(b) + Number(r)})</span>
+        <span>{b} × ({Math.pow(b, 2) - Math.pow(r, 2)} + {v * (v > 0 ? Number(b) - Number(r) : Number(b) + Number(r))})</span>
+        <span>{b} × {Math.pow(b, 2) - Math.pow(r, 2) + v * (v > 0 ? Number(b) - Number(r) : Number(b) + Number(r))}</span>
         <span>{barv(b, r, v)}</span>
       </div>
     </main>
