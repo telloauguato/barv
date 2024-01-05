@@ -13,7 +13,7 @@ export default function Home() {
 
     if (r > b) setR(b - 1)
 
-    if(Math.abs(value) >= b - r) setV(- (b - r - 1))
+    if(Math.abs(v) >= b - r) setV(- (b - r - 1))
   };
   const handleR = ({ target: { value } }) => setR(value < 0 ? 1 : value > b ? b - 1 : value);
   const handleV = ({ target: { value } }) => setV(value < 0 ? Math.abs(value) >= b - r ? - (b - r - 1) : value : value);
