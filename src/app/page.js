@@ -8,13 +8,23 @@ export default function Home() {
   const [r, setR] = useState(1);
   const [v, setV] = useState(0);
 
-  const [oldB, setOldB] = useState(b);
-  const [oldR, setOldR] = useState(r);
-  const [oldV, setOldV] = useState(v);
+  const handleB = (event) => setB(event.target.value <= 0 ? 2 : event.target.value);
+  const handleR = (event) => setR(event.target.value < 0 ? 1 : event.target.value);
+  const handleV = (event) => setV(Math.abs(event.target.value) >= b - r ? b - r - 1 : event.target.value);
 
-  const handleB = (event) => setB(event.target.value);
-  const handleR = (event) => setR(event.target.value);
-  const handleV = (event) => setV(event.target.value);
+  const barv = (b, r, v) => {
+    let lambda;
+
+    if (v > 0) {
+      lambda = b - r;
+    } else if (v < 0) {
+      lambda = b + r;
+    } else {
+      lambda = 0;
+    }
+
+    return b * (Math.pow(b, 2) - Math.pow(r, 2) + v * lambda);
+  }
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
