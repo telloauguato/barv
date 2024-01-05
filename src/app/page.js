@@ -18,10 +18,10 @@ export default function Home() {
         <input type="number" className="rounded border px-2 py-1" placeholder="v" value={v} onChange={handleV} />
       </div>
       <div className="mt-10 flex text-9xl">
-        <span>b</span>
+        <span>{b}</span>
         &lambda;
-        <span>r</span>
-        <span className="mt-10">v</span>
+        <span>{r}</span>
+        <span className="mt-10">{v}</span>
       </div>
       <div className="mt-10 flex flex-1 flex-col text-xl">
         <span>Resolução</span>
