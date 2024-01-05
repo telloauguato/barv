@@ -9,9 +9,9 @@ export default function Home() {
   const [v, setV] = useState(0);
 
   const handleB = ({ target: { value } }) => {
-    setB(Number(value) <= 0 ? 2 : value);
-    handleR(r)
-    handleV(v)
+    setB(Number(value) <= 0 ? 1 : value);
+    setR(Number(r) <= 0 ? 0 : (Number(r) >= b ? b - 1 : r))
+    setV(Number(v) < 0 ? (Math.abs(v) >= b - r ? - (b - r - 1) : v) : v)
   }
   const handleR = ({ target: { value } }) => setR(Number(value) <= 0 ? 0 : (Number(value) >= b ? b - 1 : value));
   const handleV = ({ target: { value } }) => setV(Number(value) < 0 ? (Math.abs(value) >= b - r ? - (b - r - 1) : value) : value);
