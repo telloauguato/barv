@@ -13,9 +13,9 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="flex space-x-4">
-        <input type="number" className="rounded border px-2 py-1" placeholder="b" value={b} onChange={handleB} />
-        <input type="number" className="rounded border px-2 py-1" placeholder="r" value={r} onChange={handleR} />
-        <input type="number" className="rounded border px-2 py-1" placeholder="v" value={v} onChange={handleV} />
+        <input type="number" className="rounded border px-2 py-1" placeholder="b" value={b} onBlur={handleB} />
+        <input type="number" className="rounded border px-2 py-1" placeholder="r" value={r} onBlur={handleR} />
+        <input type="number" className="rounded border px-2 py-1" placeholder="v" value={v} onBlur={handleV} />
       </div>
       <div className="mt-10 flex text-9xl">
         <span>{b}</span>
