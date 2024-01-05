@@ -13,7 +13,10 @@ export default function Home() {
     setR(Number(r) <= 0 ? 0 : (Number(r) >= Number(value) ? Number(value) - 1 : r))
     setV(Number(v) < 0 ? (Math.abs(v) >= Number(value) - r ? - (Number(value) - r - 1) : v) : v)
   }
-  const handleR = ({ target: { value } }) => setR(Number(value) <= 0 ? 0 : (Number(value) >= b ? b - 1 : value));
+  const handleR = ({ target: { value } }) => {
+    setR(Number(value) <= 0 ? 0 : (Number(value) >= b ? b - 1 : value));
+    setV(Number(v) < 0 ? (Math.abs(v) >= b - Number(value) ? - (b - Number(value) - 1) : v) : v)
+  }
   const handleV = ({ target: { value } }) => setV(Number(value) < 0 ? (Math.abs(value) >= b - r ? - (b - r - 1) : value) : value);
 
   const barv = (b, r, v) => {
