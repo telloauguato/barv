@@ -10,7 +10,7 @@ export default function Home() {
 
   const handleB = (event) => setB(event.target.value <= 0 ? 2 : event.target.value);
   const handleR = (event) => setR(event.target.value < 0 ? 1 : event.target.value);
-  const handleV = ({ target: { value } }) => setV(value < 0 ? (Math.abs(value) >= b - r ? b - r - 1 : value) : event.target.value);
+  const handleV = ({ target: { value } }) => setV(value < 0 ? (Math.abs(value) >= b - r ? b - r - 1 : value) : value);
 
   const barv = (b, r, v) => {
     let lambda;
