@@ -43,7 +43,7 @@ export default function Home() {
         <span>{b}</span>
         &lambda;
         <span>{r}</span>
-        <span className="mt-10">{v}</span>
+        <span className="mt-10">{Number(v) === 0 ? '' : v}</span>
       </div>
       <div className="mt-10 flex flex-1 flex-col text-xl text-center font-mono">
         <span>{b} × ({b}² - {r}² + {eNegativo(v)} × ({v > 0 ? `${b} - ${r}` : `${b} + ${r}`}))</span>
