@@ -8,11 +8,7 @@ export default function Home() {
   const [r, setR] = useState(1);
   const [v, setV] = useState(0);
 
-  const handleB = ({ target: { value } }) => {
-    setB(Number(value) <= 0 ? 2 : value);
-    handleR(r)
-    handleV(v)
-  }
+  const handleB = ({ target: { value } }) => setB(Number(value) <= 0 ? 2 : value);
   const handleR = ({ target: { value } }) => setR(Number(value) <= 0 ? 0 : (Number(value) >= b ? b - 1 : value));
   const handleV = ({ target: { value } }) => setV(Number(value) < 0 ? (Math.abs(value) >= b - r ? - (b - r - 1) : value) : value);
 
