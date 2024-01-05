@@ -48,7 +48,7 @@ export default function Home() {
         <span>{b}</span>
         &lambda;
         <span>{r}</span>
-        <span className="mt-1 md:mt-0">{Number(v) === 0 ? '' : v}</span>
+        <span className="mt-10">{Number(v) === 0 ? '' : v}</span>
       </div>
 
       <div className="mt-10 flex flex-1 flex-col text-sm md:text-base lg:text-lg xl:text-xl text-center font-mono">
