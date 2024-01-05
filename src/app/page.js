@@ -9,12 +9,12 @@ export default function Home() {
   const [v, setV] = useState(0);
 
   const handleB = ({ target: { value } }) => {
-    setB(value <= 0 ? 2 : value);
+    setB(Number(value) <= 0 ? 2 : value);
     handleR(r)
     handleV(v)
   }
-  const handleR = ({ target: { value } }) => setR(value <= 0 ? 0 : (value >= b ? b - 1 : value));
-  const handleV = ({ target: { value } }) => setV(value < 0 ? (Math.abs(value) >= b - r ? - (b - r - 1) : value) : value);
+  const handleR = ({ target: { value } }) => setR(Number(value) <= 0 ? 0 : (Number(value) >= b ? b - 1 : value));
+  const handleV = ({ target: { value } }) => setV(Number(value) < 0 ? (Math.abs(value) >= b - r ? - (b - r - 1) : value) : value);
 
   const barv = (b, r, v) => {
     let lambda;
