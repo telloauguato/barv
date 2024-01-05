@@ -44,13 +44,13 @@ export default function Home() {
         <span className="mt-10">{v}</span>
       </div>
       <div className="mt-10 flex flex-1 flex-col text-xl">
+        <span>{`${b} &middot; (${b} - ${r})`}</span>
         <span>Resolução</span>
         <span>Resolução</span>
         <span>Resolução</span>
         <span>Resolução</span>
         <span>Resolução</span>
-        <span>Resolução</span>
-        <span>Resolução</span>
+        <span>{barv(b, r, v)}</span>
       </div>
     </main>
   )
