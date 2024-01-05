@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Home() {
 
@@ -11,12 +11,6 @@ export default function Home() {
   const handleB = (event) => setB(event.target.value <= 0 ? 1 : event.target.value);
   const handleR = (event) => setR(event.target.value);
   const handleV = (event) => setV(event.target.value);
-
-  useEffect(() => {
-    return () => {
-      clearTimeout(temporizador);
-    };
-  }, [temporizador]);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
