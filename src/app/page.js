@@ -8,7 +8,7 @@ export default function Home() {
   const [r, setR] = useState(1);
   const [v, setV] = useState(0);
 
-  const handleB = (event) => setB(event.target.value);
+  const handleB = (event) => setB(event.target.value <= 0 ? 1 : event.target.value);
   const handleR = (event) => setR(event.target.value);
   const handleV = (event) => setV(event.target.value);
 
