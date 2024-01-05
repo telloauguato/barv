@@ -30,7 +30,7 @@ export default function Home() {
     return b * (Math.pow(b, 2) - Math.pow(r, 2) + v * lambda);
   }
 
-  const eNegativo = numero => numero < 0 ? `(${numero})` : numero
+  const eNegativo = numero => Number(numero) < 0 ? `(${numero})` : numero
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
