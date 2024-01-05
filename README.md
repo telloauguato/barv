@@ -1,33 +1,36 @@
-# bλrv
-## barv de 'b' com razão 'r' e variação 'v' — Volumes de paralelepípedos retângulos
----
-bλr<sub>v</sub> = b · (b² - r² + v · λ)
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-b > r ≥ 0
+## Getting Started
 
-v > 0 ∴ λ = b - r
+First, run the development server:
 
-v < 0 ∴ λ = b + r
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-v < 0 ∴ |v| < b - r
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-v = 0 ∴ v · λ = 0 & b > r
+You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-## Questões exemplo
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-### Qual o volume da piscina cuja barv é 4λ2<sub>4</sub> m³?
-b = 4; r = 2; v = 4.
+## Learn More
 
-v > 0 ∴ λ = b - r = 4 - 2 = 2
+To learn more about Next.js, take a look at the following resources:
 
-4λ2<sub>4</sub> = 4 · (4² - 2² + 4 · 2)
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-4λ2<sub>4</sub> = 4 · (16 - 4 + 8)
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-4λ2<sub>4</sub> = 4 · 20
+## Deploy on Vercel
 
-4λ2<sub>4</sub> = 80
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-O volume da piscina é 80 m³
-
-[Mais em barv.atspace.eu/](http://barv.atspace.eu/)
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
