@@ -48,7 +48,7 @@ export default function Home() {
         <span>{b} × ({Math.pow(b, 2)} - {Math.pow(r, 2)} + {v} × {v > 0 ? Number(b) - Number(r) : Number(b) + Number(r)})</span>
         <span>{b} × ({Math.pow(b, 2) - Math.pow(r, 2)} + {v * (v > 0 ? Number(b) - Number(r) : Number(b) + Number(r))})</span>
         <span>{b} × {Math.pow(b, 2) - Math.pow(r, 2) + v * (v > 0 ? Number(b) - Number(r) : Number(b) + Number(r))}</span>
-        <span>{barv(b, r, v)}</span>
+        <span>{barv(Number(b), Number(r), Number(v))}</span>
       </div>
     </main>
   )
