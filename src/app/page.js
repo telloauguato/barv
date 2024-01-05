@@ -1,15 +1,49 @@
 'use client'
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
 
   const [b, setB] = useState(2);
   const [r, setR] = useState(1);
   const [v, setV] = useState(0);
-  const handleB = (event) => setB(event.target.value);
-  const handleR = (event) => setR(event.target.value);
-  const handleV = (event) => setV(event.target.value);
+
+  const [temporizador, setTemporizador] = useState(null);
+
+  const handleB = (event) => {
+    clearTimeout(temporizador);
+
+    const novoTemporizador = setTimeout(() => {
+      setB(event.target.value);
+    }, 500);
+
+    setTemporizador(novoTemporizador);
+  };
+  const handleR = (event) => {
+    clearTimeout(temporizador);
+
+    const novoTemporizador = setTimeout(() => {
+      setR(event.target.value);
+    }, 500);
+
+    setTemporizador(novoTemporizador);
+  };
+  const handleV = (event) => {
+    clearTimeout(temporizador);
+
+    const novoTemporizador = setTimeout(() => {
+      setV(event.target.value);
+    }, 500);
+
+    setTemporizador(novoTemporizador);
+  };
+
+  useEffect(() => {
+    return () => {
+      clearTimeout(temporizador);
+    };
+  }, [temporizador]);
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="flex space-x-4">
